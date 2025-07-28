@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayne Trout - Futuristic Vibe Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Electrolize:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="matrix-rain" id="matrixBackground"></div>
+    <div class="tech-overlay"></div>
+    <div class="grid-pattern"></div>
+    <div class="scan-lines"></div>
+    
+    <div class="card-container">
+        <div class="vibe-card" id="vibeCard">
+            <!-- Power Button -->
+            <button class="power-button" id="powerButton" title="Toggle Theme" aria-label="Toggle light/dark theme">
+                <div class="power-icon"></div>
+            </button>
+            
+            <!-- Main Card Content -->
+            <div class="card-header">
+                <h1 class="name glitch" data-text="WAYNE TROUT">WAYNE TROUT</h1>
+                <div class="status-bar">
+                    <div class="status-indicator"></div>
+                    <span class="status-text">ONLINE</span>
+                </div>
+            </div>
+            
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="image-container">
+                    <div class="hexagon-frame">
+                        <div class="profile-image">
+                            <img src="Screenshot 2025-07-28 at 12.38.44 PM.png" alt="Wayne Trout" class="profile-photo">
+                        </div>
+                    </div>
+                    <div class="circuit-decoration left"></div>
+                    <div class="circuit-decoration right"></div>
+                </div>
+                
+                <!-- Quote Terminal -->
+                <div class="quote-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn red"></span>
+                            <span class="btn yellow"></span>
+                            <span class="btn green"></span>
+                        </div>
+                        <span class="terminal-title">philosophy.exe</span>
+                    </div>
+                    <div class="terminal-body">
+                        <span class="prompt">wayne@future:~$ </span>
+                        <span class="quote-text" id="quoteText"></span>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Cards Section -->
+            <div class="data-section">
+                <h2 class="section-title">DATA READOUTS</h2>
+                <div class="data-cards">
+                    <div class="data-card" data-delay="0">
+                        <div class="data-header">
+                            <span class="data-label">ADVENTURE_01</span>
+                            <span class="data-status">VERIFIED</span>
+                        </div>
+                        <div class="data-content">
+                            <span class="data-value">Jumped from 15,000 feet while skydiving</span>
+                        </div>
+                        <div class="hologram-effect"></div>
+                    </div>
+                    
+                    <div class="data-card" data-delay="200">
+                        <div class="data-header">
+                            <span class="data-label">SPEED_REC</span>
+                            <span class="data-status">VERIFIED</span>
+                        </div>
+                        <div class="data-content">
+                            <span class="data-value">Reached 165 mph driving a NASCAR race car</span>
+                        </div>
+                        <div class="hologram-effect"></div>
+                    </div>
+                    
+                    <div class="data-card" data-delay="400">
+                        <div class="data-header">
+                            <span class="data-label">LOCATION_LOG</span>
+                            <span class="data-status">VERIFIED</span>
+                        </div>
+                        <div class="data-content">
+                            <span class="data-value">Called Hawaii home for 3 incredible years</span>
+                        </div>
+                        <div class="hologram-effect"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Decorations -->
+            <div class="tech-lines">
+                <div class="line horizontal top"></div>
+                <div class="line horizontal bottom"></div>
+                <div class="line vertical left"></div>
+                <div class="line vertical right"></div>
+            </div>
+            
+            <!-- Corner Decorations -->
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+        </div>
+    </div>
+    
+    <!-- Hidden Easter Egg -->
+    <div class="easter-egg" id="easterEgg">
+        <div class="easter-content">
+            <h3>KONAMI CODE ACTIVATED</h3>
+            <p>Welcome to the Matrix, Wayne.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
