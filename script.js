@@ -1,8 +1,5 @@
 // Futuristic Vibe Card Interactive Features
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize matrix rain inside the card
-    initCardMatrixRain();
-    
     // Quote text and typing animation
     const quote = "Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.";
     
@@ -398,61 +395,3 @@ scanStyle.textContent = `
     }
 `;
 document.head.appendChild(scanStyle);
-
-// Matrix Rain Inside Card Effect
-function initCardMatrixRain() {
-    const matrixContainer = document.getElementById('cardMatrixRain');
-    const vibeCard = document.getElementById('vibeCard');
-    const matrixChars = '田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    
-    // Get card dimensions
-    const cardRect = vibeCard.getBoundingClientRect();
-    const columns = Math.floor(cardRect.width / 25);
-    
-    // Clear existing drops
-    matrixContainer.innerHTML = '';
-    
-    // Create matrix drops
-    for (let i = 0; i < columns; i++) {
-        createCardMatrixColumn(i, matrixContainer, matrixChars);
-    }
-}
-
-function createCardMatrixColumn(columnIndex, container, chars) {
-    const column = document.createElement('div');
-    column.style.cssText = `
-        position: absolute;
-        left: ${columnIndex * 25}px;
-        top: 0;
-        width: 25px;
-        height: 100%;
-    `;
-    
-    // Create fewer drops per column for subtlety
-    for (let j = 0; j < 2; j++) {
-        const drop = document.createElement('div');
-        drop.className = 'card-matrix-drop';
-        drop.textContent = chars[Math.floor(Math.random() * chars.length)];
-        drop.style.cssText = `
-            position: absolute;
-            left: 0;
-            font-size: ${10 + Math.random() * 6}px;
-            animation-duration: ${4 + Math.random() * 6}s;
-            animation-delay: ${Math.random() * 8}s;
-        `;
-        
-        column.appendChild(drop);
-        
-        // Randomly change character during animation
-        setInterval(() => {
-            drop.textContent = chars[Math.floor(Math.random() * chars.length)];
-        }, 150 + Math.random() * 300);
-    }
-    
-    container.appendChild(column);
-}
-
-// Reinitialize matrix rain on window resize
-window.addEventListener('resize', () => {
-    setTimeout(initCardMatrixRain, 100); // Small delay to ensure card is resized
-});
