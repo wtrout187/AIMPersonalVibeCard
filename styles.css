@@ -29,41 +29,6 @@ body {
 }
 
 /* Background Effects */
-.matrix-rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -3;
-    overflow: hidden;
-}
-
-.matrix-drop {
-    position: absolute;
-    color: #00FF41;
-    font-family: 'Electrolize', monospace;
-    font-weight: bold;
-    text-shadow: 0 0 5px #00FF41;
-    animation: matrixFall linear infinite;
-    opacity: 0.7;
-}
-
-@keyframes matrixFall {
-    0% { 
-        transform: translateY(-100vh); 
-        opacity: 1; 
-    }
-    90% { 
-        opacity: 0.1; 
-    }
-    100% { 
-        transform: translateY(100vh); 
-        opacity: 0; 
-    }
-}
-
 .tech-overlay {
     position: fixed;
     top: 0;
@@ -162,6 +127,45 @@ body {
     border-color: var(--green-accent);
 }
 
+/* Matrix Rain Inside Card */
+.card-matrix-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 0.3;
+}
+
+.card-matrix-drop {
+    position: absolute;
+    color: var(--green-accent);
+    font-family: 'Electrolize', monospace;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--green-accent);
+    animation: cardMatrixFall linear infinite;
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+@keyframes cardMatrixFall {
+    0% { 
+        transform: translateY(-50px); 
+        opacity: 1; 
+    }
+    90% { 
+        opacity: 0.2; 
+    }
+    100% { 
+        transform: translateY(calc(100% + 50px)); 
+        opacity: 0; 
+    }
+}
+
 /* Power Button */
 .power-button {
     position: absolute;
@@ -211,6 +215,7 @@ body {
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
+    z-index: 10;
 }
 
 .name {
@@ -319,6 +324,8 @@ body {
     gap: 2rem;
     margin-bottom: 2rem;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 
 .image-container {
@@ -479,6 +486,8 @@ body {
 /* Data Section */
 .data-section {
     margin-top: 2rem;
+    position: relative;
+    z-index: 10;
 }
 
 .section-title {
