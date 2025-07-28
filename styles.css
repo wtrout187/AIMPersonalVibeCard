@@ -175,20 +175,22 @@ body {
 .card-header {
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding-right: 60px;
     position: relative;
     z-index: 10;
 }
 
 .name {
     font-family: 'Orbitron', monospace;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--text-primary);
     text-shadow: 
         0 0 10px var(--purple-glow),
         0 0 20px var(--purple-glow),
         0 0 30px var(--purple-glow);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 1rem;
     position: relative;
 }
